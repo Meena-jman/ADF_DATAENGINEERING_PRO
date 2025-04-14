@@ -1,0 +1,9 @@
+{
+	"name": "adf-data-engineering-sales",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "291df229-975d-4991-97d1-8872648beca3",
+		"tenantId": "9993059d-dc85-404d-9e60-c03cd6b98c59"
+	}
+}

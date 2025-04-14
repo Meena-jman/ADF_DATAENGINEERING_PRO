@@ -1,0 +1,65 @@
+{
+	"name": "copy_blob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BLOB_SALES",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"file_name": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().file_name",
+					"type": "Expression"
+				},
+				"container": "sales-dataset-container"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CustomerId",
+				"type": "String"
+			},
+			{
+				"name": "CustomerCode",
+				"type": "String"
+			},
+			{
+				"name": "CustomerShortName",
+				"type": "String"
+			},
+			{
+				"name": "AccountBalance",
+				"type": "String"
+			},
+			{
+				"name": "CreditLimit",
+				"type": "String"
+			},
+			{
+				"name": "CreatedDate",
+				"type": "String"
+			},
+			{
+				"name": "LastModifiedDate",
+				"type": "String"
+			},
+			{
+				"name": "ActiveStatus",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
